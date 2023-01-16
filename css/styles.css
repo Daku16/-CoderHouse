@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+#index, #contact{
+    background: linear-gradient(to top right, #003c63, #009ec1);
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+#header{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.logo{
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu__nav{
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    display: flex;
+    gap: 2rem;
+}
+#menu__nav li{
+    list-style: none;
+}
+#menu__nav li:active{
+    color: red;
+    text-decoration: underline wavy #003c63;
+}
+
+#main__home, #main__contact{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    height: 55.9rem; 
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/v617batch2-kul-05-technology.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 3rem;
+    border-radius: 2%;
+    box-shadow: .5rem .5rem 1rem 1rem #00091B;
+}
+
+.main__title{
+    font-weight: normal;
+}
+.main__subtitle{
+    font-weight: normal;
+}
+
+#footer{
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-evenly;
+    height: 3.8rem;
+}
+
+.footer__redes{
+    width: 13rem;
+    display: flex;
+    gap: 2rem;
+}
+
+/*----------------------------------------------------ABOUT ME-------------------------------------------------*/
+
+#aboutMe, #proyects{
+    background: linear-gradient(to top left, #004386, #941357);
+    color: white;
+}
+
+#main__aboutMe, #main__proyects{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 4rem;
+    margin: 3rem;
+    height: 55.9rem; 
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/v627-aew-41-technologybackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 3rem;
+    border-radius: 2%;
+    box-shadow: .5rem .5rem 1.5rem 1rem #010101;
+}
+
+.main__aboutMe--contenido{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.main__aboutMe--parafro{
+    width: 30rem;
+}
+
+.main__aboutMe--imagen{
+    width: 30rem;
+    height: 40rem;
+    border: solid black;
+    background-color: blue;
+    opacity: 0.3;
+}
+
+/*----------------------------------------------------ABILITIES------------------------------------------------------*/
+
+#abilities{
+    background: linear-gradient(to top right, #D62A59, #21006C);
+    color: white;
+}
+
+.abilities__title{
+    font-weight: normal;
+    font-size: 4rem;
+}
+
+#main__abilities{
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    height: 55.9rem; 
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url(../img/8289968_25328.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 3rem;
+    border-radius: 2%;
+    box-shadow: .5rem .5rem 1.5rem 1rem #010101;
+}
+
+.section__logos1, .section__logos2{
+    display: flex;
+    gap: 5rem;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.section__logo{ 
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5%;
+}
+
+.html{
+    box-shadow: .5rem .5rem 1.5rem .2rem #E34C26;
+    background-color: #F06529;
+    transition: 0.5s;
+}
+.css{
+    box-shadow: .5rem .5rem 1.5rem .2rem #2565AE;
+    background-color: #3C99DC;
+    transition: .5s;
+}
+.javascript{
+    box-shadow: .5rem .5rem 1.5rem .2rem #F0DB4F;
+    background-color: #323330;
+    transition: .5s;
+}
+.git{
+    box-shadow: .5rem .5rem 1.5rem .2rem #F1502F;
+    background-color: #f0efe7;
+    transition: .5s;
+}
+.reactjs{
+    box-shadow: .5rem .5rem 1.5rem .2rem #61DBFB;
+    transition: .5s;
+}
+.nodejs{
+    box-shadow: .5rem .5rem 1.5rem .2rem #68A063;
+    background-color: #303030;
+    transition: .5s;
+}
+.sql{
+    box-shadow: .5rem .5rem 1.5rem .2rem #00758F;
+    background-color: #f0efe7;
+    transition: .5s;
+}
+.mongodb{
+    box-shadow: .5rem .5rem 1.5rem .2rem #4DB33D;
+    background-color: #3F3E42;
+    transition: .5s;
+}
+
+.text__slide{
+    position: absolute;
+    white-space:nowrap;
+    color: rgba(255,255,255,0);
+    transition: .5s;
+}
+.html:hover, .css:hover, .javascript:hover, .git:hover, .reactjs:hover, .nodejs:hover, .sql:hover, .mongodb:hover{
+    transform: scale(1.05, 1.05);
+}
+.html:hover .text__slide, .css:hover .text__slide, .javascript:hover .text__slide, .git:hover .text__slide, .git:hover .text__slide, .reactjs:hover .text__slide, .nodejs:hover .text__slide, .sql:hover .text__slide, .mongodb:hover .text__slide {
+    color: whitesmoke;
+    transform: translateY(-3rem);
+}
+
+/*----------------------------------------------------Proyects--------------------------------------------------*/
+
+.container{
+    width: 100rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+}
+
+.container .card .face{
+    width: 30rem;
+    height: 20rem;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(10rem);
+    transition: 0.5s;
+    
+}
+
+.container .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow: .5rem .5rem 1.5rem 1rem #61DBFB, inset .5rem .5rem 1.5rem 1rem #D62A59;
+}
+
+.container .card:hover .face.face1 .content i{
+    transition: 0.5s;
+    color: #D62A59;
+    opacity: 1;
+}
+
+.container .card .face.face1 .content i{
+    font-size: 3rem;
+    color: white;
+    display: inline-block;
+    opacity: .2;
+}
+.container .card .face.face1 .content h3{
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+.container .card .face.face2{
+    position: relative;
+    background: whitesmoke;
+    color: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .8);
+    transform: translateY(-10rem);
+    transition: 0.5s;
+}
+.container .card:hover .face.face2{
+    transform: translateY(0);
+    box-shadow: .5rem .5rem 1.5rem 1rem #61DBFB;
+}
+
+/*----------------------------------------------------Contact-------------------------------------------------------------------*/
+
+#main__contact{
+    justify-content: space-evenly;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.form__inputs{
+    display: flex;
+    flex-direction: column;
+}
+.form__inputs input{
+    width: 30rem;
+    height: 3rem;
+}
+.form__inputs textarea{
+    width: 30rem;
+    height: 10rem;
+    resize: none;
+}
+#form button{
+    height: 3.5rem;
+    width: 15rem;
+    background: #00091B;
+    color: whitesmoke;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+#form button:hover{
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    background: #009ec1;
+    color: #00091B;
+}
