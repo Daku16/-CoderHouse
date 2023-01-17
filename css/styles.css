@@ -8,6 +8,9 @@ html{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
+body{
+    min-height: 100%;
+}
 #index, #contact{
     background: linear-gradient(to top right, #003c63, #009ec1);
     color: white;
@@ -101,22 +104,6 @@ ul:hover li a:not(:hover){
     gap: 2rem;
 }
 
-@media screen and (max-width: 425px){
-    #menu__nav{
-        opacity: 0;
-    }
-    #menu{
-        visibility: hidden;
-        position: absolute;
-    }
-    .logo{
-        grid-column: 2/3;
-    }
-}
-@media screen and (max-width: 768px){
-
-}
-
 /*----------------------------------------------------ABOUT ME-------------------------------------------------*/
 
 #aboutMe, #proyects{
@@ -132,14 +119,14 @@ ul:hover li a:not(:hover){
     gap: 4rem;
     margin: 3rem;
     margin-top: 0;
-    height: 55.9rem; 
+    min-height: 55.9rem; 
     align-items: center;
     justify-content: center;
     background-image: url(../img/v627-aew-41-technologybackground.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    border-radius: 2%;
+    border-radius: 3rem;
     box-shadow: .5rem .5rem 1.5rem 1rem #010101;
 }
 
@@ -161,6 +148,7 @@ ul:hover li a:not(:hover){
     opacity: 0.3;
 }
 
+
 /*----------------------------------------------------ABILITIES------------------------------------------------------*/
 
 #abilities{
@@ -179,19 +167,21 @@ ul:hover li a:not(:hover){
     flex-direction: column;
     margin: 3rem;
     margin-top: 0;
-    height: 55.9rem; 
+    min-height: 55.9rem; 
     align-items: center;
     justify-content: space-evenly;
     background-image: url(../img/8289968_25328.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    border-radius: 2%;
+    border-radius: 3rem;
     box-shadow: .5rem .5rem 1.5rem 1rem #010101;
 }
 
-.section__logos1, .section__logos2{
-    display: flex;
+.section__logos1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 5rem;
     flex-flow: row wrap;
     align-items: center;
@@ -257,13 +247,63 @@ ul:hover li a:not(:hover){
     transform: translateY(-3rem);
 }
 
+@media screen and (max-width: 425px){
+    #menu__nav{
+        opacity: 0;
+    }
+    #menu{
+        visibility: hidden;
+        position: absolute;
+    }
+    .logo{
+        grid-column: 2/3;
+    }
+    .main__title{
+        font-size: 2.5rem;
+    }
+    .main__subtitle{
+        font-size: 1.5rem;
+    }
+
+    /*----------------------------------------------------ABOUT ME-------------------------------------------------*/
+    #main__aboutMe, #main__proyects{
+        flex-direction: column;
+    }
+    .main__aboutMe--contenido{
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .main__aboutMe--imagen{
+        margin-bottom: 1rem;
+    }
+    
+    /*----------------------------------------------------ABILITIES------------------------------------------------------*/
+    .section__logos1{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-bottom: 2rem;
+    }
+    .abilities__title{
+        margin: 3rem;
+    }
+
+    /*----------------------------------------------------Proyects--------------------------------------------------*/
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+
+}
 /*----------------------------------------------------Proyects--------------------------------------------------*/
 
 .container{
-    width: 100rem;
+    width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .container .card{
