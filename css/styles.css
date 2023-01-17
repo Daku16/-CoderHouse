@@ -178,6 +178,7 @@ ul:hover li a:not(:hover){
     display: flex;
     flex-direction: column;
     margin: 3rem;
+    margin-top: 0;
     height: 55.9rem; 
     align-items: center;
     justify-content: space-evenly;
@@ -185,7 +186,6 @@ ul:hover li a:not(:hover){
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin: 3rem;
     border-radius: 2%;
     box-shadow: .5rem .5rem 1.5rem 1rem #010101;
 }
