@@ -6,6 +6,7 @@
 html{
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 #index, #contact{
     background: linear-gradient(to top right, #003c63, #009ec1);
@@ -14,6 +15,7 @@ html{
 a{
     text-decoration: none;
     color: white;
+    transition: .5s;
 }
 
 img{
@@ -21,29 +23,44 @@ img{
 }
 
 #header{
-    display: flex;
-    justify-content: space-around;
-
+    height: 7rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
 }
 
 .logo{
     font-size: 2.5rem;
-    margin-top: 3rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+#menu{
+    grid-column: 2/4;
 }
 
 #menu__nav{
-    margin-top: 3rem;
     font-size: 1.6rem;
     display: flex;
     gap: 2rem;
+    grid-column: 2/4;
 }
 #menu__nav li{
     list-style: none;
+    transition: .5s;
 }
-#menu__nav li:active{
-    color: red;
-    text-decoration: underline wavy #003c63;
+#menu__nav li:hover{
+    transform: scale(1.10);
+}
+ul:hover li a:not(:hover){
+    color:black;
+    opacity: 1;
+    filter: blur(.1rem);
+}
+
+#menu__responsive{
+    visibility: hidden;
+    position: absolute;
 }
 
 #main__home, #main__contact{
@@ -51,17 +68,18 @@ img{
     display: flex;
     flex-direction: column;
     margin: 3rem;
-    height: 55.9rem; 
+    margin-top: 0;
+    min-height: 55.9rem; 
     align-items: center;
     justify-content: center;
     background-image: url(../img/v617batch2-kul-05-technology.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin: 3rem;
-    border-radius: 2%;
+    border-radius: 3rem;
     box-shadow: .5rem .5rem 1rem 1rem #00091B;
 }
+
 
 .main__title{
     font-weight: normal;
@@ -83,6 +101,22 @@ img{
     gap: 2rem;
 }
 
+@media screen and (max-width: 425px){
+    #menu__nav{
+        opacity: 0;
+    }
+    #menu{
+        visibility: hidden;
+        position: absolute;
+    }
+    .logo{
+        grid-column: 2/3;
+    }
+}
+@media screen and (max-width: 768px){
+
+}
+
 /*----------------------------------------------------ABOUT ME-------------------------------------------------*/
 
 #aboutMe, #proyects{
@@ -97,6 +131,7 @@ img{
     align-items: baseline;
     gap: 4rem;
     margin: 3rem;
+    margin-top: 0;
     height: 55.9rem; 
     align-items: center;
     justify-content: center;
@@ -104,7 +139,6 @@ img{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin: 3rem;
     border-radius: 2%;
     box-shadow: .5rem .5rem 1.5rem 1rem #010101;
 }
