@@ -26,7 +26,7 @@ img{
 }
 
 #header{
-    height: 7rem;
+    min-height: 7rem;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3,1fr);
@@ -38,10 +38,18 @@ img{
     font-size: 2.5rem;
     font-family: Arial, Helvetica, sans-serif;
 }
-#menu{
+.menu{
     grid-column: 2/4;
+    width: max-content;
 }
-
+.nav__boton{
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
 #menu__nav{
     font-size: 1.6rem;
     display: flex;
@@ -53,19 +61,20 @@ img{
     transition: .5s;
 }
 #menu__nav li:hover{
-    transform: scale(1.10);
+    transform: scale(1.15);
 }
-ul:hover li a:not(:hover){
+.menu__nav--link--active{
+    color: #D62A59;
+    background-color: #21006C;
+    padding: 1.5rem;
+    padding-top: 15rem;
+    border-radius: 11rem;
+}
+#menu__nav:hover li .menu__nav--link:not(:hover){
     color:black;
     opacity: 1;
     filter: blur(.1rem);
 }
-
-#menu__responsive{
-    visibility: hidden;
-    position: absolute;
-}
-
 #main__home, #main__contact{
     font-size: 1.6rem;
     display: flex;
@@ -247,56 +256,7 @@ ul:hover li a:not(:hover){
     transform: translateY(-3rem);
 }
 
-@media screen and (max-width: 425px){
-    #menu__nav{
-        opacity: 0;
-    }
-    #menu{
-        visibility: hidden;
-        position: absolute;
-    }
-    .logo{
-        grid-column: 2/3;
-    }
-    .main__title{
-        font-size: 2.5rem;
-    }
-    .main__subtitle{
-        font-size: 1.5rem;
-    }
 
-    /*----------------------------------------------------ABOUT ME-------------------------------------------------*/
-    #main__aboutMe, #main__proyects{
-        flex-direction: column;
-    }
-    .main__aboutMe--contenido{
-        margin-top: 1rem;
-        text-align: center;
-    }
-    .main__aboutMe--imagen{
-        margin-bottom: 1rem;
-    }
-    
-    /*----------------------------------------------------ABILITIES------------------------------------------------------*/
-    .section__logos1{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        margin-bottom: 2rem;
-    }
-    .abilities__title{
-        margin: 3rem;
-    }
-
-    /*----------------------------------------------------Proyects--------------------------------------------------*/
-    .container{
-        flex-direction: column;
-        align-items: center;
-        margin: 2rem;
-    }
-}
-@media screen and (max-width: 768px){
-
-}
 /*----------------------------------------------------Proyects--------------------------------------------------*/
 
 .container{
@@ -402,4 +362,82 @@ ul:hover li a:not(:hover){
     transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
     background: #009ec1;
     color: #00091B;
+}
+
+@media screen and (max-width: 425px){
+    .menu{
+        text-align: center;
+        position: fixed;
+        justify-content: center;
+        top: 6rem;
+        background-color: #004386;
+        width: 100%;
+        padding: .5rem 0;
+        box-shadow: 0 .5rem 1.5rem  black;
+        left: 110%;
+        transition: left 0.5s;
+    }
+    #menu2{
+        background-color: #941357;
+    }
+    #menu__nav{
+        flex-direction: column;
+    }
+    #menu__nav li:hover{
+        background-color: #00758F;
+    }
+    
+    .menu__nav--link--active{
+        background:none;
+        color: #3C99DC;
+        padding: 0;
+    }
+    .nav__boton{
+        display: block;
+    }
+    .menu__nav--visible{
+        left: 0;
+        z-index: 2;
+    }
+    .logo{
+        grid-column: 2/3;
+    }
+    .main__title{
+        font-size: 2.5rem;
+    }
+    .main__subtitle{
+        font-size: 1.5rem;
+    }
+
+    /*----------------------------------------------------ABOUT ME-------------------------------------------------*/
+    #main__aboutMe, #main__proyects{
+        flex-direction: column;
+    }
+    .main__aboutMe--contenido{
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .main__aboutMe--imagen{
+        margin-bottom: 1rem;
+    }
+    
+    /*----------------------------------------------------ABILITIES------------------------------------------------------*/
+    .section__logos1{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-bottom: 2rem;
+    }
+    .abilities__title{
+        margin: 3rem;
+    }
+
+    /*----------------------------------------------------Proyects--------------------------------------------------*/
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+
 }

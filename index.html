@@ -11,15 +11,18 @@
 <body>
     <header id="header">
         <a class="logo" href="./index.html">Logo</a>
-        <nav id="menu">
+        <button class="nav__boton">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="menu">
             <ul id="menu__nav">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./pages/aboutMe.html">About Me</a></li>
-                <li><a href="./pages/abilities.html">Abilities</a></li>
-                <li><a href="./pages/proyects.html">Proyects</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
+                <li><a class="menu__nav--link menu__nav--link--active" href="./index.html">Home</a></li>
+                <li><a class="menu__nav--link" href="./pages/aboutMe.html">About Me</a></li>
+                <li><a class="menu__nav--link" href="./pages/abilities.html">Abilities</a></li>
+                <li><a class="menu__nav--link" href="./pages/proyects.html">Proyects</a></li>
+                <li><a class="menu__nav--link" href="./pages/contact.html">Contact</a></li>
             </ul>
-            <input type="checkbox" name="menu" id="menu__responsive">
+            
         </nav>
     </header>
     <main id="main__home">
@@ -35,5 +38,8 @@
             <a href="https://github.com/"><img src="./img/github.png" alt="Logo github"></a>
         </section>
     </footer>
+
+    <script src="https://kit.fontawesome.com/7bb9cac67e.js" crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>

@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
     <title>About Me</title>
 </head>
 <body>
     <header id="header">
         <a class="logo" href="../index.html">Logo</a>
-        <nav id="menu">
+        <button class="nav__boton">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="menu2" class="menu">
             <ul id="menu__nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./aboutMe.html">About Me</a></li>
-                <li><a href="./abilities.html">Abilities</a></li>
-                <li><a href="./proyects.html">Proyects</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a class="menu__nav--link" href="../index.html">Home</a></li>
+                <li><a class="menu__nav--link menu__nav--link--active" href="./aboutMe.html">About Me</a></li>
+                <li><a class="menu__nav--link" href="./abilities.html">Abilities</a></li>
+                <li><a class="menu__nav--link" href="./proyects.html">Proyects</a></li>
+                <li><a class="menu__nav--link" href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -39,5 +43,8 @@
             <a href="https://github.com/"><img src="../img/github.png" alt="Logo github"></a>
         </section>
     </footer>
+
+    <script src="https://kit.fontawesome.com/7bb9cac67e.js" crossorigin="anonymous"></script>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
