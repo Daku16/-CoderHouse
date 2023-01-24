@@ -8,9 +8,7 @@ html{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
-body{
-    min-height: 100%;
-}
+
 #index, #contact{
     background: linear-gradient(to top right, #003c63, #009ec1);
     color: white;
@@ -81,7 +79,7 @@ img{
     flex-direction: column;
     margin: 3rem;
     margin-top: 0;
-    min-height: 55.9rem; 
+    min-height: 60rem; 
     align-items: center;
     justify-content: center;
     background-image: url(../img/v617batch2-kul-05-technology.jpg);
@@ -364,7 +362,7 @@ img{
     color: #00091B;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 576px){
     .menu{
         text-align: center;
         position: fixed;
